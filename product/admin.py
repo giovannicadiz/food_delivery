@@ -7,8 +7,9 @@ admin.site.site_header = "Food Delivery - Administration"
 
 
 class MenuAdmin(admin.ModelAdmin):
-
+    # List of visualization by field
     list_display = ['name', 'mainCourse', 'sideDish', 'salad', 'dessert', 'drink']
+    # Ordering by field
     ordering = ('name',)
 
 

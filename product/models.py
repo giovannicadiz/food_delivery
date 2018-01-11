@@ -38,7 +38,7 @@ class SideDish(models.Model):
     # Meta class for the model.
     class Meta:
         verbose_name = 'Side Dish'
-        verbose_name_plural = 'Side Dish'
+        verbose_name_plural = 'Side Dishs'
 
 
 class Salad(models.Model):
