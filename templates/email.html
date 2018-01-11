@@ -2,9 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Menu</title>
+    <style>
+        table {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 12px;
+            margin: 45px;
+            width: 880px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        th {
+            font-size: 13px;
+            font-weight: normal;
+            padding: 8px;
+            background: #b9c9fe;
+            border-top: 4px solid #aabcfe;
+            border-bottom: 1px solid #fff;
+            color: #039;
+        }
+
+        td {
+            padding: 8px;
+            background: #e8edff;
+            border-bottom: 1px solid #fff;
+            color: #669;
+            border-top: 1px solid transparent;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-
+    <p>Hola !</p>
+    <p>Dejo el menu de hoy :)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>MAIN COURSE</th>
+                <th>SIDE DISH</th>
+                <th>SALAD</th>
+                <th>DESSERT</th>
+                <th>DRINK</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%for i in obj%}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.mainCourse}}</td>
+                <td>{{i.sideDish}}</td>
+                <td>{{i.salad}}</td>
+                <td>{{i.dessert}}</td>
+                <td>{{i.drink}}</td>
+            </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+    <p>Tengan lindo dia !</p>
 </body>
 </html>
