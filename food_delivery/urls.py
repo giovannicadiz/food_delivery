@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from send_menu.views import send_email, send_slack
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^send_email/', send_email, name='send_email'),
+    url(r'^send_slack/', send_slack, name='send_slack'),
 ]
