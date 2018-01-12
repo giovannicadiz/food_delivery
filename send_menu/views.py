@@ -1,4 +1,4 @@
-from django.template.loader import get_template
+from django.template.loader import get_template, render_to_string
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 from slackclient import SlackClient
@@ -38,7 +38,8 @@ def send_email(request):
 
     return HttpResponse('send_email')
 
-# Slack Token
+
+# SLACK TOKEN
 SLACK_TOKEN = 'xxx-666'
 
 def send_slack(request):
@@ -64,7 +65,7 @@ def send_slack(request):
     }
 
     sc = SlackClient(SLACK_TOKEN)
-    message = get_template('email.html').render(context)
+    message = render_to_string('email.txt', context)
     sc.api_call(
 
         "chat.postMessage",
